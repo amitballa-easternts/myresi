@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\http\Controllers\UserRegistration;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('myquery',[UserRegistration::class,"querybuild"]);
+Route::get('myresult/{id?}',[UserRegistration::class,"querymy"]);
+Route::post("addpost",[UserRegistration::class,"addpost"]);

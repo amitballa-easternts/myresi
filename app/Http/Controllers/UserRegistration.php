@@ -39,7 +39,7 @@ class UserRegistration extends Controller
 
     public function list()
     {
-        $data = Table_register::all();
+        $data = Table_register::paginate(5);
         return view('list',["members"=>$data]);
     }
     public function deletehere(Request $id)
@@ -111,10 +111,36 @@ class UserRegistration extends Controller
 
     public function querybuild()
     {
-        $data=DB::table('Table_registers')->get();
+        return $data=DB::table('Table_registers')->get();
         //return $data=DB::table('Table_registers')->join('students','Table_registers.fisrt_name','=','students.username')->get();
         //return Table_register::count();
-        return view('querybuild',["members"=>$data]);
+        //return view('querybuild',["members"=>$data]);
+        
+    }
+    public function querymy($id=null)
+    {
+        return $id?Table_register::find($id) :Table_register::all();
+       // return $data=DB::table('Table_registers')->get();
+        //return $data=DB::table('Table_registers')->join('students','Table_registers.fisrt_name','=','students.username')->get();
+        //return Table_register::count();
+        //return view('querybuild',["members"=>$data]);
+        
+    }
+    public function addpost(Request $req)
+    {
+        $blog= new Table_register;
+
+        $blog->fisrt_name=$req->fisrt_name;
+        $blog->lastname=$req->lastname;
+
+        $result=$blog->save();
+        if($result)
+        {
+            return ["reslut"=>"done"];
+        }
+        else{
+            return ["result"=>"Not Done"];
+        }
         
     }
 }

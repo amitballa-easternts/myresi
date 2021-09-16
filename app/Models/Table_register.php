@@ -22,7 +22,7 @@ class Table_register extends Model
         $blog->lastname=$req->lname;
         $blog->email=$req->email;
         $blog->password= Hash::make($req->password);;
-        
+        $blog->email=$req->file('file')->store('img');
         $blog->save();
         $req->session()->flash("success","Register SuccessFully");
 
@@ -43,5 +43,6 @@ class Table_register extends Model
         $data= Table_register::find($req->id);
         $data->delete();
     }
+
 }
  

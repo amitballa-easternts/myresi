@@ -32,7 +32,7 @@
             @endif
     </div>
         <div class="card-body">
-            <form method="POST" action="/regist">
+            <form method="POST" action="/regist" enctype="multipart/form-data">
                 @csrf
                 <div class="row">
                     <div class="col-sm-6">
@@ -96,7 +96,18 @@
                         <span style="color:red">@error('password'){{$message}}@enderror</span>
                         </div>
                     </div>
-
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                        <label for="">File</label>
+                        <input type="file"
+                               class="form-control"  
+                               name="file" 
+                               id="file" 
+                               
+                               require>
+                        <span style="color:red">@error('password'){{$message}}@enderror</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-5">

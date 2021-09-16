@@ -9,4 +9,5 @@ class Register extends Model
 {
     
     use HasFactory;
+    public $timestamps=false;
 }
