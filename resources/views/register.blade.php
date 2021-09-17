@@ -52,7 +52,7 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                        <label for="">Last Namesdds</label>
+                        <label for="">Last Namesddsdds</label>
                         <input type="text"
                                class="form-control"  
                                name="lname" 
@@ -69,7 +69,7 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                        <label for="">Emaildff</label>
+                        <label for="">Email maidsdd</label>
                         <input type="email" 
                                 class="form-control"
                                 name="email"
