@@ -32,7 +32,7 @@ Route::get("delete/{id}",[UserRegistration::class,"deletehere"]);
 Route::get("edit/{id}",[UserRegistration::class,"ShowData"]);
 Route::post("edit",[UserRegistration::class,"updatehere"]);
 
-Route::get('student',[StudentController::class,\"show"]);
+Route::get('student',[StudentController::class,"show"]);
 
 Route::get('login',[UserRegistration::class,"login"]);
 Route::post('log',[UserRegistration::class,"checklogin"]);
