@@ -69,7 +69,7 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                        <label for="">Email productt changes</label>
+                        <label for="">Email productt changes123</label>
                         <input type="email" 
                                 class="form-control"
                                 name="email"
