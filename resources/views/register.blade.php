@@ -40,7 +40,7 @@
                         <label for="">First Name</label>
                         <input type="text" 
                                 class="form-control"
-                                name="fname"
+                                 name="fname"
                                 id="fname"
                                 aria-describedby="helpId"
                                 placeholder="Enter First Name" 
