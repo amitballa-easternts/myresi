@@ -20,7 +20,7 @@
     <div class="container">
     <div class="card">
         <div class="card-header">
-            <h1 class="text-success text-center">Registration</h1>
+            <h1 class="text-success text-center">Registration New Form</h1>
 
             @if(Session::get('success'))
            
