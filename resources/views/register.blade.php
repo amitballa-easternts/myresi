@@ -40,7 +40,7 @@
                         <label for="">First Name</label>
                         <input type="text" 
                                 class="form-control"
-                                name="fname"
+                                 name="fname"
                                 id="fname"
                                 aria-describedby="helpId"
                                 placeholder="Enter First Name" 
@@ -69,7 +69,7 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                        <label for="">Email </label>
+                        <label for="">Email</label>
                         <input type="email" 
                                 class="form-control"
                                 name="email"

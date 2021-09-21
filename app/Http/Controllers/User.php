@@ -10,5 +10,10 @@ class User extends Controller
     {
         return "hell0";
     }
+
+    function myroute($req)
+    {
+        return view('mycontroller',['data'=>$req]);
+    }
 }
 
