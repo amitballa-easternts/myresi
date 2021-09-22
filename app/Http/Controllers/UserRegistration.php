@@ -111,6 +111,7 @@ class UserRegistration extends Controller
 
     public function querybuild()
     {
+    
         return $data=DB::table('Table_registers')->get();
         //return $data=DB::table('Table_registers')->join('students','Table_registers.fisrt_name','=','students.username')->get();
         //return Table_register::count();
@@ -120,16 +121,18 @@ class UserRegistration extends Controller
     public function querymy($id=null)
     {
         return $id?Table_register::find($id) :Table_register::all();
-       // return $data=DB::table('Table_registers')->get();
+        //return $data=DB::table('Table_registers')->get();
         //return $data=DB::table('Table_registers')->join('students','Table_registers.fisrt_name','=','students.username')->get();
         //return Table_register::count();
         //return view('querybuild',["members"=>$data]);
         
     }
+    
     public function addpost(Request $req)
     {
-        $blog= new Table_register;
 
+        $blog= new Table_register;
+        
         $blog->fisrt_name=$req->fisrt_name;
         $blog->lastname=$req->lastname;
 

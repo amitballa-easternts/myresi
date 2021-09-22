@@ -21,15 +21,7 @@ Route::get('/', function () {
     return view('welcome');
 });
   
-/* Step 1 route call */
-//Route::view('myroute','mycontroller');
 
-
-/* Step 2 route call */
-/* Route::get('myroute',function(){
-    return view('mycontroller');    
-});
- */
 /* Step 3 route call */
 Route::get('myroute/{id}',[User::class,'myroute']);
 
@@ -49,7 +41,8 @@ Route::get('student',[StudentController::class,"show"]);
 Route::get('login',[UserRegistration::class,"login"]);
 Route::post('log',[UserRegistration::class,"checklogin"]);
 Route::view('profile',"profile");
-Route::get('logout',function(){
+Route::get('logout',function()
+{
     if(session()->has('email'))
     {
         session()->pull('email');
