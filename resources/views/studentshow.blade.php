@@ -21,7 +21,7 @@
 
         <table class="table table-dark table-hover">
         <tr>
-            <th>Sr</th>
+            <th>Sr NO</th>
             <th>UserName</th>
             <th>Age</th>
             <th>Email</th>
